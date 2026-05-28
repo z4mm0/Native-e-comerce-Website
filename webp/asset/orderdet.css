@@ -1,0 +1,199 @@
+/* --- Khusus Halaman Admin Orders --- */
+
+:root {
+    --primary-green: #798763;
+    --soft-pink: #fce4ec;
+    --bright-pink: #ff85a2;
+    --accent-rose: #d81b60;
+    --white: #ffffff;
+}
+
+/* Pengaturan Dropdown Status - Lebih Glowy */
+.table select,
+.status-select {
+    padding: 10px 35px 10px 15px;
+    border-radius: 12px;
+    border: 2px solid var(--soft-pink);
+    background-color: var(--white);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #555;
+    cursor: pointer;
+    appearance: none;
+    /* Custom Arrow Warna Pink */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ff85a2' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+    box-shadow: 0 4px 6px rgba(255, 133, 162, 0.05);
+}
+
+.table select:hover,
+.status-select:hover {
+    border-color: var(--bright-pink);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(255, 133, 162, 0.15);
+}
+
+/* Warna Status Spesifik */
+option[value="pending"] { color: #f39c12; background: #fff; }
+option[value="shipped"] { color: var(--primary-green); background: #fff; }
+option[value="delivered"] { color: #2ecc71; background: #fff; }
+option[value="cancelled"] { color: var(--accent-rose); background: #fff; }
+
+/* Styling Tabel Admin - Mewah */
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    margin: 20px 0;
+}
+
+.table th {
+    background: linear-gradient(135deg, var(--primary-green) 0%, #94a381 100%);
+    color: white;
+    font-weight: 700;
+    padding: 18px 20px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border: none;
+}
+
+.table th:first-child { border-radius: 15px 0 0 15px; }
+.table th:last-child { border-radius: 0 15px 15px 0; }
+
+.table td {
+    padding: 15px 20px;
+    background: white;
+    color: #555;
+    font-size: 14px;
+    vertical-align: middle;
+    border-top: 1px solid var(--soft-pink);
+    border-bottom: 1px solid var(--soft-pink);
+    transition: 0.3s;
+}
+
+.table tr td:first-child { border-left: 1px solid var(--soft-pink); border-radius: 15px 0 0 15px; }
+.table tr td:last-child { border-right: 1px solid var(--soft-pink); border-radius: 0 15px 15px 0; }
+
+.table tr:hover td {
+    background-color: #fff9fb; /* Sentuhan pink sangat tipis */
+    border-color: var(--bright-pink);
+}
+
+/* Tombol Update Status - Gradasi */
+.table td .btn-primary {
+    background: linear-gradient(45deg, var(--primary-green), #94a381);
+    color: white;
+    padding: 8px 18px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 10px rgba(121, 135, 99, 0.2);
+}
+
+.table td .btn-primary:hover {
+    background: linear-gradient(45deg, var(--bright-pink), var(--accent-rose));
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(216, 27, 96, 0.2);
+}
+
+/* Badge Status Konfirmasi */
+.confirmed-badge {
+    background-color: var(--soft-pink);
+    color: var(--accent-rose);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 11px;
+    border: 1px solid var(--bright-pink);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.confirmed-badge::before { content: '🌸'; font-size: 10px; }
+
+/* --- Khusus Halaman Detail Pesanan --- */
+.order-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(121, 135, 99, 0.1);
+    border: 2px solid var(--soft-pink);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dekorasi pojok container */
+.order-container::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    background: var(--soft-pink);
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.section p strong {
+    color: var(--accent-rose);
+}
+
+.total-amount {
+    background: var(--soft-pink);
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-green);
+    text-align: right;
+    margin-top: 30px;
+    border-right: 8px solid var(--bright-pink);
+}
+
+.total-amount span {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--accent-rose);
+    display: block;
+}
+
+.btn-back, .btn-secondary {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: var(--primary-green);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 12px;
+    transition: 0.3s;
+    border: none;
+}
+
+.btn-back:hover, .btn-secondary:hover {
+    background: var(--bright-pink);
+    transform: translateX(-5px);
+    box-shadow: 0 5px 15px rgba(255, 133, 162, 0.3);
+}
+
+/* Responsif */
+@media (max-width: 992px) {
+    .table {
+        display: block;
+        overflow-x: auto;
+    }
+}

@@ -1,0 +1,518 @@
+/* --- Halaman Dashboard & Keranjang HighmonkBoquet --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fff5f8;
+    margin: 0;
+    padding: 0;
+    color: #444;
+}
+
+/* --- NAVBAR STYLING --- */
+.navbar {
+    background: linear-gradient(135deg, #798763 0%, #5f6d50 100%);
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 12px rgba(121, 135, 99, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    flex: 1;
+}
+
+.brand-text {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.user-menu span {
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* --- MAIN WRAPPER --- */
+.main-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px 0;
+}
+
+.page-header h2 {
+    font-size: 36px;
+    color: #798763;
+    margin: 0 0 10px 0;
+}
+
+.page-header p {
+    font-size: 16px;
+    color: #999;
+    margin: 0;
+}
+
+/* --- FILTER SECTION --- */
+.filter-section {
+    margin-bottom: 40px;
+    padding: 20px 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(121, 135, 99, 0.08);
+}
+
+.filter-title {
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    color: #798763;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    border: 2px solid #e0e0e0;
+    background: white;
+    color: #666;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.filter-btn:hover {
+    border-color: #798763;
+    color: #798763;
+}
+
+.filter-btn.active {
+    background: #798763;
+    color: white;
+    border-color: #798763;
+}
+
+/* --- PRODUCTS GRID --- */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 1200px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .main-wrapper {
+        padding: 15px;
+    }
+    
+    .page-header {
+        padding: 15px 0;
+    }
+    
+    .page-header h2 {
+        font-size: 28px;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .user-menu {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .user-menu span {
+        text-align: center;
+    }
+}
+
+/* --- PRODUCT CARD --- */
+.product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(121, 135, 99, 0.12);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(121, 135, 99, 0.15);
+}
+
+.product-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.08);
+}
+
+.product-info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info h3 {
+    margin: 0 0 6px 0;
+    font-size: 15px;
+    color: #333;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.category {
+    margin: 0 0 8px 0;
+    font-size: 11px;
+    color: #798763;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.description {
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    color: #888;
+    line-height: 1.3;
+    flex-grow: 1;
+}
+
+.price {
+    margin: 0 0 6px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #798763;
+}
+
+.stock {
+    margin: 0 0 12px 0;
+    font-size: 11px;
+    color: #aaa;
+}
+
+/* --- EMPTY BOX --- */
+.empty-box {
+    text-align: center;
+    padding: 80px 40px;
+    background: white;
+    border-radius: 20px;
+    border: 2px dashed #ddd;
+    color: #888;
+    font-size: 16px;
+}
+
+/* Container utama disamakan dengan main-wrapper dashboard */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 30px;
+}
+
+.cart-header {
+    margin-bottom: 30px;
+}
+
+.cart-header h2 {
+    color: #798763;
+    font-size: 32px;
+    margin: 0;
+}
+
+/* --- Tabel Keranjang (Model Card) --- */
+.cart-content {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(121, 135, 99, 0.1);
+    overflow: hidden; /* Agar border-radius memotong tabel */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    background: #f8f9fa;
+    color: #798763;
+    padding: 20px;
+    text-align: left;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.table td {
+    padding: 20px;
+    border-bottom: 1px solid #f1f1f1;
+    vertical-align: middle;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Info Produk di dalam Tabel */
+.cart-item-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-item-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+    background: #f5f5f5;
+}
+
+/* --- Tombol Aksi --- */
+.btn-remove {
+    background: #fff;
+    color: #d81b60;
+    border: 1px solid #fce4ec;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-remove:hover {
+    background: #fce4ec;
+}
+
+/* --- Ringkasan & Total --- */
+.cart-footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.summary-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(121, 135, 99, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: right;
+}
+
+.summary-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #999;
+}
+
+.total-price {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #798763;
+    margin-bottom: 25px;
+}
+
+.btn-checkout {
+    background: #798763;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-checkout:hover {
+    background: #5f6d50;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(121, 135, 99, 0.2);
+}
+
+.btn-back {
+    display: inline-block;
+    margin-top: 20px;
+    color: #798763;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* --- State Kosong --- */
+.empty-cart-box {
+    background: white;
+    padding: 80px 40px;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px dashed #ddd;
+    color: #888;
+}
+/* --- Tambahan Styling Tombol Navigasi --- */
+.user-menu button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-nav, .btn-navactive, .btn-logout {
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s;
+    display: inline-block;
+    border: none;
+    margin: 0 5px;
+}
+
+/* Tombol Keranjang / Aktif (Hijau) */
+.btn-navactive {
+    background: #798763;
+    color: white;
+}
+
+.btn-navactive:hover {
+    background: #5f6d50;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(121, 135, 99, 0.2);
+}
+
+/* Tombol Pesanan Saya (Outline Hijau) */
+.btn-nav {
+    background: #798763;
+    color: white;
+}
+
+.btn-nav:hover {
+    background: #798763;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(121, 135, 99, 0.2);
+}
+
+/* Tombol Logout (Pink Soft) */
+.btn-logout {
+    background: #798763;
+    color: white;
+}
+
+.btn-logout:hover {
+    background: #798763;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(216, 27, 96, 0.2);
+}
+
+/* --- Styling Button Tambah ke Keranjang --- */
+.product-info form {
+    width: 100%;
+    margin-top: auto;
+}
+
+.btn-add-cart {
+    background: #798763;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+}
+
+.btn-add-cart:hover {
+    background: #5f6d50;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(121, 135, 99, 0.2);
+}

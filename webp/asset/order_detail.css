@@ -1,0 +1,401 @@
+/* --- asset/order_detail.css --- */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fff5f8; /* Soft earth tone background */
+    margin: 0;
+    padding: 0;
+    color: #444;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 15px rgba(121, 135, 99, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.navbar h1 {
+    font-size: 22px;
+    color: #798763;
+    margin: 0;
+}
+
+/* --- TOMBOL (BUTTONS) --- */
+.btn-secondary {
+    background-color: #f1f3ee;
+    color: #798742;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    border: 2px solid #798742;
+    transition: 0.3s;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.btn-secondary:hover {
+    background-color: #798742;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(121, 135, 99, 0.2);
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #798763;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-right: 10px;
+    box-shadow: 0 4px 10px rgba(121, 135, 99, 0.2);
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-primary:hover {
+    background-color: #5f6b4d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(121, 135, 99, 0.3);
+}
+
+.btn-success {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-right: 10px;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-success:hover {
+    background-color: #1e7e34;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(40, 167, 69, 0.3);
+}
+
+.btn-danger {
+    display: inline-block;
+    background-color: #dc3545;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-right: 10px;
+    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.2);
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(220, 53, 69, 0.3);
+}
+
+/* --- INFO PESANAN (ORDER INFO) --- */
+.order-info {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(121, 135, 99, 0.08);
+    margin-bottom: 30px;
+    border-left: 8px solid #798763;
+}
+
+.order-info p {
+    margin: 10px 0;
+    font-size: 16px;
+    border-bottom: 1px dashed #f1f3ee;
+    padding-bottom: 8px;
+}
+
+.order-info p strong {
+    color: #798763;
+    display: inline-block;
+    width: 100px;
+}
+
+/* Order Actions */
+.order-actions {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #f1f3ee;
+}
+
+/* Success Message */
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 5px solid #28a745;
+    animation: slideInDown 0.5s ease-out;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px 25px;
+    border-radius: 10px;
+    border-left: 5px solid #28a745;
+    margin: 15px 0 !important;
+    border-bottom: none !important;
+}
+
+.info-message {
+    background-color: #cce5ff;
+    color: #004085;
+    padding: 15px 25px;
+    border-radius: 10px;
+    border-left: 5px solid #0056b3;
+    margin: 15px 0 !important;
+    border-bottom: none !important;
+}
+
+.cancel-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px 25px;
+    border-radius: 10px;
+    border-left: 5px solid #dc3545;
+    margin: 15px 0 !important;
+    border-bottom: none !important;
+}
+
+@keyframes slideInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+
+/* --- BADGE STATUS --- */
+.status {
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.status-pending { 
+    background-color: #ffd6a5; 
+    color: #795548; 
+}
+
+.status-processing { 
+    background-color: #fff3cd;
+    color: #856404; 
+}
+
+.status-shipped { 
+    background-color: #bee5eb; 
+    color: #0c5460; 
+}
+
+.status-delivered { 
+    background-color: #d4edda; 
+    color: #155724; 
+}
+
+.status-cancelled { 
+    background-color: #f8d7da; 
+    color: #721c24; 
+}
+
+/* --- TABEL ITEM --- */
+h3 {
+    color: #798763;
+    margin-bottom: 15px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(121, 135, 99, 0.05);
+}
+
+.table th {
+    background-color: #798763;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+.table td {
+    padding: 15px;
+    border-bottom: 1px solid #f1f3ee;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+    font-weight: bold;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+    .container { margin: 20px auto; }
+    .navbar h1 { font-size: 18px; }
+    .btn-primary { width: 100%; text-align: center; box-sizing: border-box; }
+}
+/* Styling khusus tabel item agar rapi dan tidak polos */
+.item-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 15px;
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(121, 135, 99, 0.1);
+}
+
+.item-table thead th {
+    background-color: #798763; /* Sage Green */
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.item-table tbody td {
+    padding: 15px;
+    border-bottom: 1px solid #fce4ec; /* Pink tipis */
+    color: #555;
+    font-size: 14px;
+}
+
+.item-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Kolom Produk (Pink Highlight) */
+.item-table tbody td:first-child {
+    font-weight: 600;
+    color: #d81b60; /* Accent Rose */
+}
+
+/* Kolom Subtotal (Sage Highlight) */
+.subtotal-column {
+    text-align: right;
+    font-weight: 700;
+    color: #798763;
+}
+
+/* Memberi efek hover agar interaktif */
+.item-table tbody tr:hover {
+    background-color: #fff9fb;
+}
+/* Container pembungkus agar ada jarak dari tepi layar */
+.order-items-wrapper {
+    margin-top: 30px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(121, 135, 99, 0.05);
+}
+
+.section-title {
+    color: #798763;
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Tabel Utama */
+.item-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0; /* Penting untuk border-radius */
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #fce4ec;
+}
+
+/* Header dengan Padding Luas */
+.item-table thead th {
+    background-color: #798763;
+    color: white;
+    padding: 18px 15px; /* Memberikan ruang di atas dan samping teks */
+    text-align: left;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Baris Data dengan Padding */
+.item-table tbody td {
+    padding: 20px 15px; /* Padding yang membuat teks tidak sesak */
+    background-color: white;
+    border-bottom: 1px solid #fce4ec;
+    color: #555;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+/* Highlight Nama Produk */
+.product-name {
+    font-weight: 700;
+    color: #d81b60 !important; /* Warna Pink Rose */
+}
+
+/* Merapikan kolom angka */
+.qty-cell {
+    text-align: center;
+}
+
+.subtotal-cell {
+    text-align: right;
+    font-weight: 700;
+    color: #798763;
+}
+
+/* Efek saat baris disorot */
+.item-table tbody tr:hover td {
+    background-color: #fff9fb;
+    transition: 0.3s;
+}
+
+/* Menghilangkan border pada baris terakhir agar tidak dobel dengan radius */
+.item-table tbody tr:last-child td {
+    border-bottom: none;
+}

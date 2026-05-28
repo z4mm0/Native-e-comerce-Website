@@ -1,0 +1,205 @@
+/* Import Font Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: #fff5f8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+/* --- Dekorasi Background --- */
+.bg-decoration {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.5;
+}
+
+.circle-1 { 
+    width: 450px; 
+    height: 450px; 
+    background: #798763; 
+    top: -100px; 
+    right: -100px; 
+}
+
+.circle-2 { 
+    width: 350px; 
+    height: 350px; 
+    background: #ffd6a5; 
+    bottom: -50px; 
+    left: -50px; 
+}
+
+/* --- Container Utama (Sangat Lebar) --- */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.form-wrapper {
+    background: white;
+    padding: 60px 50px;         /* Padding dalam agar lega */
+    border-radius: 50px;
+    box-shadow: 0 15px 35px rgba(121, 135, 99, 0.15);
+    text-align: center;
+    width: 100%;
+    max-width: 850px;           /* UKURAN CONTAINER LEBAR */
+    animation: bounceIn 0.8s ease;
+}
+
+/* --- Logo & Teks --- */
+.brand-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.brand-icon svg {
+    filter: drop-shadow(0 5px 10px rgba(121, 135, 99, 0.2));
+    animation: pulse 2s infinite;
+}
+
+h1 { 
+    color: #798763; 
+    font-size: 32px; 
+    margin-bottom: 8px; 
+}
+
+h2 { 
+    color: #798742; 
+    font-size: 18px; 
+    margin-bottom: 35px; 
+    font-weight: 400;
+}
+
+/* --- Form & Input (Menyamakan Ukuran Container) --- */
+.form {
+    width: 100%;               /* Form mengambil lebar penuh container */
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+    width: 100%;               /* Group mengambil lebar penuh */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    margin-left: 5px;
+    color: #798763;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;               /* INPUT MENGIKUTI LEBAR CONTAINER */
+    padding: 15px 20px;
+    border: 2px solid #798742;
+    border-radius: 15px;
+    background: #fffcfc;
+    font-family: inherit;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #798763;
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(121, 135, 99, 0.2);
+}
+
+/* --- Tombol Lebar --- */
+.btn-primary {
+    width: 100%;               /* TOMBOL MENGIKUTI LEBAR CONTAINER */
+    padding: 16px;
+    background: #798763;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    box-shadow: 0 8px 20px rgba(121, 135, 99, 0.2);
+}
+
+.btn-primary:hover {
+    background: #5f6b4d;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(121, 135, 99, 0.3);
+}
+
+/* --- Error & Footer --- */
+.error {
+    color: #ffffff;
+    background: #e74c3c;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-footer { 
+    margin-top: 30px; 
+    font-size: 14px; 
+    color: #888; 
+}
+
+.form-footer a { 
+    color: #798763; 
+    text-decoration: none; 
+    font-weight: 700; 
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- Animasi --- */
+@keyframes bounceIn {
+    0% { opacity: 0; transform: scale(0.5); }
+    60% { opacity: 1; transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsif --- */
+@media (max-width: 768px) {
+    .form-wrapper {
+        padding: 40px 25px;
+    }
+    h1 { font-size: 26px; }
+}

@@ -1,0 +1,115 @@
+/* Gunakan font yang sama dengan halaman utama */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fff5f8;
+    color: #444;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #798763;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* --- Tabel Keranjang yang Lebih Bersih --- */
+.table-wrapper {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(121, 135, 99, 0.1);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    background: #f8f9fa;
+    color: #798763;
+    padding: 20px;
+    text-align: left;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #eee;
+}
+
+.table td {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+/* --- Styling Tombol Aksi --- */
+.btn-danger {
+    color: #d81b60;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid #fce4ec;
+    transition: 0.3s;
+}
+
+.btn-danger:hover {
+    background: #fce4ec;
+}
+
+/* --- Ringkasan Total --- */
+.cart-summary {
+    margin-top: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(121, 135, 99, 0.1);
+    text-align: right;
+}
+
+.cart-summary h3 {
+    color: #444;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.cart-summary .total-price {
+    color: #798763;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.btn-checkout {
+    display: inline-block;
+    background: #798763;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-checkout:hover {
+    background: #5f6d50;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(121, 135, 99, 0.2);
+}
+
+/* Area Kosong (Gunakan style empty-box yang sudah ada) */
+.empty-cart {
+    @extend .empty-box; /* Jika pakai SASS, atau copy style .empty-box Anda */
+}
+    

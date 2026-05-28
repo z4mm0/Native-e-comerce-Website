@@ -1,0 +1,161 @@
+/* Menggunakan Font Quicksand yang ramah */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fff5f8; /* Pink soft sesuai palet sebelumnya */
+    margin: 0;
+    color: #444;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 15px rgba(121, 135, 99, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.navbar h1 {
+    color: #798763;
+    font-size: 22px;
+    margin: 0;
+}
+
+/* --- Form Wrapper --- */
+.form {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(121, 135, 99, 0.08);
+    animation: fadeInUp 0.6s ease-out;
+}
+
+h2 {
+    color: #798763;
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-align: center;
+}
+
+/* --- Form Groups --- */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #798763;
+    font-weight: 700;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e2e8da;
+    border-radius: 15px;
+    background: #fafbf9;
+    font-family: inherit;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Penting agar padding tidak merusak lebar */
+}
+
+.form-group input:focus, 
+.form-group textarea:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: #798763;
+    background: white;
+    box-shadow: 0 0 15px rgba(121, 135, 99, 0.15);
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    width: 100%;
+    padding: 16px;
+    background: #798763;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 5px 15px rgba(121, 135, 99, 0.2);
+}
+
+.btn-primary:hover {
+    background: #5f6b4d;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(121, 135, 99, 0.3);
+}
+
+.btn-secondary {
+    padding: 10px 20px;
+    background: #f1f3ee;
+    color: #798742;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #e2e8da;
+}
+
+/* --- Alerts --- */
+.success {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #f5c6cb;
+}
+
+/* --- Animasi --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+    .form {
+        padding: 25px;
+    }
+}

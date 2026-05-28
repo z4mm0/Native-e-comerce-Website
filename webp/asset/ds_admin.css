@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fff5f8; /* Pink soft seperti sebelumnya */
+    color: #444;
+}
+
+/* --- ADMIN NAVBAR --- */
+.admin-header {
+    background: white;
+    padding: 25px 0;
+    box-shadow: 0 4px 15px rgba(121, 135, 99, 0.1);
+    margin-bottom: 40px;
+    border-radius: 0 0 40px 40px;
+    text-align: center;
+}
+
+.admin-header h1 {
+    color: #798763; /* Sage Green Utama */
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.admin-header p {
+    color: #888;
+    font-size: 14px;
+}
+
+.admin-header a {
+    color: #798742; /* Earth Tone */
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* --- WRAPPER --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 25px 60px 25px;
+}
+
+/* --- SECTION CARD --- */
+section {
+    background: white;
+    padding: 35px;
+    border-radius: 35px;
+    box-shadow: 0 10px 30px rgba(121, 135, 99, 0.08);
+    margin-bottom: 40px;
+    border: 1px solid rgba(121, 135, 99, 0.05);
+}
+
+h2 {
+    color: #798763;
+    margin-bottom: 25px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- TOMBOL AKSI (Sage Style) --- */
+.btn-add {
+    display: inline-block;
+    background: #798763;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(121, 135, 99, 0.2);
+}
+
+.btn-add:hover {
+    background: #5f6b4d;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(121, 135, 99, 0.3);
+}
+
+/* --- TABEL MODERN --- */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #f1f3ee; /* Background sage sangat muda */
+    color: #798763;
+    text-align: left;
+    padding: 18px;
+    font-weight: 700;
+    font-size: 14px;
+    border-bottom: 2px solid #e2e8da;
+}
+
+td {
+    padding: 18px;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 14px;
+    color: #666;
+}
+
+tr:hover {
+    background: #fafbf9;
+}
+
+/* --- BADGE & LINK ACTION --- */
+.action-links a {
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 13px;
+    margin-right: 8px;
+    transition: all 0.3s ease;
+}
+/* --- Gaya Dasar Tombol --- */
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-primary, .btn-secondary, .btn-warning, .btn-danger {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* --- Button Primary (Sage Green) --- */
+.btn-primary {
+    background-color: #798763;
+    color: white;
+    box-shadow: 0 4px 10px rgba(121, 135, 99, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #5f6b4d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(121, 135, 99, 0.3);
+}
+
+/* --- Button Secondary (Earth Tone / Brownish) --- */
+.btn-secondary {
+    background-color: #f1f3ee;
+    color: #798742;
+    border: 1px solid #798742;
+}
+
+.btn-secondary:hover {
+    background-color: #798742;
+    color: white;
+}
+
+/* --- Button Warning (Edit - Peach/Yellow Tone) --- */
+.btn-warning {
+    background-color: #ffd6a5;
+    color: #795548;
+}
+
+.btn-warning:hover {
+    background-color: #ffc885;
+    transform: scale(1.05);
+}
+
+/* --- Button Danger (Delete - Red Tone) --- */
+.btn-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.btn-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Khusus untuk tombol di dalam Navbar agar sejajar */
+.navbar .btn-secondary {
+    padding: 8px 15px;
+    font-size: 13px;
+    margin-left: 10px;
+}
